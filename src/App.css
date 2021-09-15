@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: helvetica neue, Helvetica, Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.game {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    background-color: skyblue;
+    /* will center it */
+    margin: auto;
+    /* keeps the blocks from showing up outside the game */
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.block {
+    width: 50px;
+    height: 500px;
+    background-color: green;
+    position: relative;
+    left: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.block_animation {
+    animation: block 2s infinite linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes block {
+    0% {
+        left: 400px;
+    }
+    100% {
+        left: -50px;
+    }
+}
+
+.space {
+    width: 50px;
+    height: 150px;
+    background-color: skyblue;
+    position: relative;
+    left: 400px;
+    top: -500px;
+
+    /* animation: block 2s infinite linear; */
+}
+
+.character {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
+.button {
+    margin: auto;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
